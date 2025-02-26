@@ -1,5 +1,7 @@
-from flask import Flask, render_template
 import os
+import random
+
+from flask import Flask, jsonify, render_template
 
 #####
 
@@ -17,3 +19,19 @@ def index():
     """
 
     return render_template("index.html")
+
+
+@app.route("/updateMessage")
+def update_message():
+    """
+    Returns a message to display in the frontend
+    """
+
+    message_options = [
+        "Have a great day!",
+        "Thanks for reading!",
+        "You're the best!",
+        "Wow, what an article!",
+    ]
+
+    return jsonify(random.choice(message_options))

@@ -1,13 +1,13 @@
 import './App.css';
 import Cowboy from './components/cowboy';
-import ThankYou from './components/thankYou';
+import DisplayMessage from './components/displayMessage';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <Cowboy />
-        <ThankYou />
+        <DisplayMessage />
       </header>
     </div>
   );
